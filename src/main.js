@@ -6,7 +6,12 @@
 
 
 //now we created remord address==>user call tht url
-import  Express  from "express";
+// remotely executable
+// Network call
+// Network Address
+// Remote address
+// http://localhost:4000/
+import express from "express";
 const app = express();
 
 app.listen(4000);

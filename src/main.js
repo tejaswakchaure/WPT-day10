@@ -1,7 +1,12 @@
-import { MongoClient } from "mongodb";
 
-async function main() {
-return "hello World"
-}
+// remotly executed for that i have remote addres
+//network call
+//network address
+//http://localhost:4000/
 
-main();
+
+//now we created remord address==>user call tht url
+import  Express  from "express";
+const app = express();
+
+app.listen(4000);

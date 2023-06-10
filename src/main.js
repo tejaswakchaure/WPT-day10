@@ -11,9 +11,14 @@ function main(req, res) {
   // return "some message";
   res.send("some message...!")
 }
-
-// http://loaclhost:4000/main
+function first(req, res){
+    res.send("Success");
+}
+// http://localhost:4000/main
 app.get("/main", main);
 
-// http://loaclhost:4000
+// http://localhost:4000/first
+app.get("first", first);
+
+//http://localhost:4000
 app.listen(4000);

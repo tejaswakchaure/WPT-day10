@@ -13,6 +13,21 @@ async function insertRecord(jsonDocument) {
   console.log("Record Added");
 }
 
+
+async function readMessage() {
+    const uri = "mongodb://localhost:27017";
+    const client = new MongoClient(uri);
+  
+    // logic of read
+    let db = client.db("mydb");
+    let message = db.collection("message");
+  
+    let list = await message.find().toArray();
+    await client.close();
+  
+    return list;
+  }
+  
 async function main() {
   let jsonDocument = {
     message: "Hello Universee",
@@ -20,6 +35,8 @@ async function main() {
     from: "tejas",
   };
   await insertRecord(jsonDocument);
+  let list = await readMessage();
+  console.log(list);
 }
 
 main();
